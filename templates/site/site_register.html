@@ -1,0 +1,54 @@
+<div class="left">
+<h1>Anmeldung</h1>
+
+{if isset($no_register)}
+<p>Die Anmeldung ist derzeit geschlossen</p>
+{else}
+<form action="" id="form_Register">
+<table id="login_table">
+	<tr>
+		<th>Benutzername:</th>
+		<td><input type="text" value="" name="username" /></td>
+	</tr>
+
+	<tr>
+		<th>Passwort:</th>
+		<td><input type="password" value="" name="password" /></td>
+	</tr>
+
+	<tr>
+		<th>Passwort wiederholen:</th>
+		<td><input type="password" value="" name="password2" /></td>
+	</tr>
+
+	<tr>
+		<th>Emailadresse:</th>
+		<td><input type="text" value="" name="email" /></td>
+	</tr>
+
+	<tr>
+		<th><a href="{$app_dir}site/legal/agb" target="_blank">AGBs</a> und <a href="{$app_dir}site/legal/rules" target="_blank">Regeln</a> akzeptiert:</th>
+		<td><input type="checkbox" value="yes" name="rules" id="rulesfield" /></td>
+	</tr>
+
+	<tr>
+		<td></td>
+		<td><input type="submit" value="Anmelden!" id="signupBtn" /></td>
+	</tr>
+
+</table>
+
+<input type="hidden" name="by" value="{$by}" />
+</form>
+{/if}
+</div>
+
+<div class="right">
+	<h1 id="register_h1">Die Anmeldung</h1>
+
+	<p id="register_p">
+	Die Anmeldung bei Manager's Life ist kostenlos.
+	</p>
+</div>
+
+<br class="clear" />

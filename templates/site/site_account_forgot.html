@@ -1,0 +1,30 @@
+{extends file="site/site_account.html"}
+
+{block name="manage_account_func"}
+{if ($acc_type == 'forgot')}
+Passwort vergessen
+{else}
+Neue Aktivierungs-Email anfordern
+{/if}
+{/block}
+
+{block name="manage_account"}
+<p>
+{if ($acc_type == 'forgot')}
+Damit wir Dir ein neues Passwort zusenden können, benötigen wir deinen Benutzernamen oder 
+deine Emailadresse. <b>Achtung: Du kannst dein Passwort nur alle 24 Stunden einmal zurück setzten!</b>
+{else}
+Damit wir Dir eine neue Aktivierungsmail zusenden können, benötigen wir deinen Benutzernamen oder 
+deine Emailadresse.
+{/if}
+<br />
+Falls du nach 15 Minuten keine Email von uns erhalten hast, so schau bitte in deinem Spam-Ordner nach. 
+Sollte sich dort auch keine Email von uns befinden, so wende dich an den Support.
+</p>
+
+<form id="form_Forgot">
+	<input type="text" name="resetparam" value="" />
+	<input type="hidden" name="action" value="{$acc_type}" />
+	<input type="submit" id="forgotBtn" value="{if ($acc_type == 'forgot')}Passwort zurücksetzen{else}Email anfordern{/if}" />
+</form>
+{/block}

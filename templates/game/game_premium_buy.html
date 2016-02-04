@@ -1,0 +1,45 @@
+<h1>Premium-Account kaufen</h1>
+
+<p>
+	Gekaufte Premium-Punkte werden nach Zahlungseingang innerhalb kürzester Zeit
+	auf deinem Account gutgeschrieben. Solltest du innerhalb von einem Tag immer
+	noch keine Premium-Punkte erhalten haben, so wende dich bitte an den Support
+	(<a href="mailto:mail@managerslife.de">mail@managerslife.de</a>). Auch bei
+	Fehlern wärend dem Bezahlvorgang bitte an den Support wenden.
+</p>
+
+<table class="ordered">
+	<tr>
+		<th>Premium-Punkte</th>
+		<th>Preis</th>
+		<th>Per eBank</th>
+		<th>Per Telefon</th>
+		<th>Per Handy</th>
+	</tr>
+
+	{foreach $pRows as $r}
+	<tr>
+		<td>{$r.points}</td>
+		<td>{$r.cost}€</td>
+		<td>
+			<a href="#" onclick="window.open('{$r.ebank}', 'Micropayment - eBank2Pay', 'width=600,height=570,scrolling=no');">
+				<img src="https://www.micropayment.de/resources/?what=img&group=eb2p&show=type7.130x40.logo1" alt="Bezahlvorgang starten" style="border:none;" />
+			</a>
+		</td>
+		<td>
+		{if (!empty($r.call))}
+			<a href="#" onclick="window.open('{$r.call}', 'Micropayment - Call2Pay', 'width=600,height=570,scrolling=no');">
+				<img src="https://www.micropayment.de/resources/?what=img&group=c2p&show=type7.130x40.blue" alt="Bezahlvorgang starten" style="border:none;" />
+			</a>
+		{/if}
+		</td>
+		<td>
+		{if (!empty($r.handy))}
+			<a href="#" onclick="window.open('{$r.handy}', 'Micropayment - HandyPay', 'width=600,height=570,scrolling=no');">
+				<img src="https://www.micropayment.de/resources/?what=img&group=hp&show=type7.130x40.green1" alt="Bezahlvorgang starten" style="border:none;" />
+			</a>
+		{/if}
+		</td>
+	</tr>
+	{/foreach}
+</table>

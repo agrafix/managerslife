@@ -1,0 +1,3 @@
+RewriteEngine on
+RewriteRule ^(?:site|game|ajax)/.*$ index.php?q=$0
+RewriteRule ^(?:controllers|models|lib|templates|templates_c|cache|config) - [R=403]

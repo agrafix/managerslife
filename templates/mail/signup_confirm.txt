@@ -1,0 +1,14 @@
+Hallo {$username},
+
+vielen Dank für deine Anmeldung bei {$homepage} ! Um deinen 
+Spielaccount zu aktivieren musst du nur noch auf folgenden Link klicken:
+
+-------------------------------------------------------------------------
+
+{$activation_url}
+
+-------------------------------------------------------------------------
+
+Wir wünschen die viel Spaß beim Spielen,
+
+dein Manager's Life Team

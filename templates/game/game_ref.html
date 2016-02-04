@@ -1,0 +1,42 @@
+<h1>Spieler werben Spieler</h1>
+
+<p>Wir würden uns sehr freuen, wenn du von unserem Spiel erzählst und neue Spieler
+in unser Spiel einlädst! Je mehr Spieler, desto mehr Spaß wird das Spiel bringen. <br />
+Wenn sich ein Spieler über deinen Ref-Link (siehe unten) anmeldet, bekommst du
+<b>150 Premium-Punkte</b> sobald dieser <b>Level 2</b> erreicht.</p>
+
+<p>
+	Achtung: Es ist nicht erlaubt Spieler mit gleicher IP zu werben.
+</p>
+
+<h2>Dein persönlicher Ref-Link</h2>
+
+<input type="text" value="{$ref_link}" style="width:80%" />
+
+<p>
+	Dieser Link darf nur verbreitet werden wo es erlaubt ist und damit darf nicht gespammed werden!
+</p>
+
+<h2>geworbene Spieler</h2>
+
+<table class='ordered'>
+	<tr>
+		<th>Spieler</th> <th>Level 2 erreicht?</th>
+	</tr>
+	{foreach $refed_players as $player}
+	<tr>
+		<td>{$player.username|htmlspecialchars}</td>
+		<td>
+			{if $player.referee_awarded}
+				<img src="{$img_dir}icons/tick.png" alt="ja" />
+			{else}
+				<img src="{$img_dir}icons/cross.png" alt="ja" />
+			{/if}
+		</td>
+	</tr>
+	{foreachelse}
+	<tr>
+		<td colspan='2'><i>Du hast noch keine Spieler geworben</i></td>
+	</tr>
+	{/foreach}
+</table>

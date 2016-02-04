@@ -1,0 +1,85 @@
+{
+	"calculator": {
+		"base_price": 260,
+		"needs": [
+		          {"ress": "chip", "amount": 1},
+		          {"ress": "plastic", "amount": 1},
+		          {"ress": "display", "amount": 1}
+		         ],
+		"machine": {"cost": 1900000, "running_cost": 5000, "prod_per_hour": 100}
+	},
+
+	"smartphone": {
+		"base_price": 550,
+		"needs": [
+		          {"ress": "chip", "amount": 3},
+		          {"ress": "plastic", "amount": 2},
+		          {"ress": "display", "amount": 1}
+		         ],
+		"machine": {"cost": 4000000, "running_cost": 10000, "prod_per_hour": 50}
+	},
+
+	"notebook": {
+		"base_price": 1700,
+		"needs": [
+		          {"ress": "chip", "amount": 5},
+		          {"ress": "plastic", "amount": 1},
+		          {"ress": "display", "amount": 2},
+		          {"ress": "aluminium", "amount": 2}
+		         ],
+		 "machine": {"cost": 6000000, "running_cost": 20000, "prod_per_hour": 20}
+	},
+
+	"fridge": {
+		"base_price": 4500,
+		"needs": [
+		          {"ress": "chip", "amount": 2},
+		          {"ress": "aluminium", "amount": 10}
+		         ],
+		"machine": {"cost": 1500000, "running_cost": 8000, "prod_per_hour": 2}
+	},
+
+	"chair": {
+		"base_price": 50,
+		"needs": [
+		          {"ress": "wood", "amount": 1}
+		         ],
+		"machine": {"cost": 50000, "running_cost": 1000, "prod_per_hour": 25}
+	},
+
+	"table": {
+		"base_price": 115,
+		"needs": [
+		          {"ress": "wood", "amount": 4}
+		         ],
+		"machine": {"cost": 650000, "running_cost": 8000, "prod_per_hour": 90}
+	},
+
+	"pants": {
+		"base_price": 70,
+		"needs": [
+		          {"ress": "color", "amount": 1},
+		          {"ress": "cloth", "amount": 2}
+		         ],
+		"machine": {"cost": 250000, "running_cost": 3000, "prod_per_hour": 80}
+
+	},
+
+	"shirt": {
+		"base_price": 110,
+		"needs": [
+		          {"ress": "color", "amount": 1},
+		          {"ress": "cloth", "amount": 3}
+		         ],
+		"machine": {"cost": 550000, "running_cost": 6000, "prod_per_hour": 90}
+	},
+
+	"magazine": {
+		"base_price": 20,
+		"needs": [
+		          {"ress": "color", "amount": 1},
+		          {"ress": "paper", "amount": 1}
+		         ],
+		"machine": {"cost": 500000, "running_cost": 500, "prod_per_hour": 500}
+	}
+}

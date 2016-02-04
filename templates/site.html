@@ -1,0 +1,34 @@
+{extends file="main.html"}
+
+
+{block name="subtitle"}Kostenloses Management-MMORPG Browserspiel | Managerspiel{/block}
+
+{block name="header"}{/block}
+
+{block name="rss"}
+<link rel="alternate" href="{$app_dir}site/rss/news" title="Manager's Life - News" type="application/rss+xml" />
+{/block}
+
+{block name="nav"}
+<a href="{$app_dir}site/index">Home</a> |
+<a href="{$app_dir}site/register">Anmelden</a> |
+<a href="http://forum.managerslife.de">Forum</a> |
+<a href="{$app_dir}site/legal/rules">Regeln</a> |
+<a href="http://wiki.managerslife.de/" target="_blank">Hilfe</a>
+{/block}
+
+{block name="content"}
+	<div id="subcontent">
+	{include file=$template}
+	</div>
+{/block}
+
+{block name="footer"}{/block}
+
+{block name="agbf"}
+<a href="{$app_dir}site/legal/data">Datenschutz</a> | <a href="{$app_dir}site/legal/agb">AGB</a> | <a href="{$app_dir}site/legal/disclaimer">Disclaimer</a> | <a href="{$app_dir}site/legal/imprint">Impressum</a>
+<br /><br />
+<a href="http://www.agrafix.net" title="Agrafix Webdesign"><img src="http://misc.agrafix.net/agrafixbutton.jpg" alt="Agrafix" /></a>
+{/block}
+
+{block name="final"}{/block}

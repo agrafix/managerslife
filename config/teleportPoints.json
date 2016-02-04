@@ -1,0 +1,85 @@
+{
+	"main": [
+			{"x": 21, "y": 5, "target": {"x": 1, "y": 5, "map": "main2"}},
+			{"x": 21, "y": 6, "target": {"x": 1, "y": 6, "map": "main2"}},
+
+			{"x": 21, "y": 12, "target": {"x": 1, "y": 12, "map": "main2"}},
+			{"x": 21, "y": 13, "target": {"x": 1, "y": 13, "map": "main2"}},
+
+			{"x": 2, "y": 4, "target": {"x": 7, "y": 12, "map": "bank"}},
+
+			{"x": 18, "y": 12, "target": {"x": 9, "y": 13, "map": "supermarket"}}
+	],
+
+	"main2": [
+			{"x": 0, "y": 5, "target": {"x": 20, "y": 5, "map": "main"}},
+			{"x": 0, "y": 6, "target": {"x": 20, "y": 6, "map": "main"}},
+
+			{"x": 0, "y": 12, "target": {"x": 20, "y": 12, "map": "main"}},
+			{"x": 0, "y": 13, "target": {"x": 20, "y": 13, "map": "main"}},
+
+			{"x": 4, "y": 11, "target": {"x": 9, "y": 13, "map": "livinghouse"}},
+
+			{"x": 4, "y": 15, "target": {"x": 4, "y": 1, "map": "main3"}},
+			{"x": 8, "y": 15, "target": {"x": 8, "y": 1, "map": "main3"}},
+			{"x": 9, "y": 15, "target": {"x": 9, "y": 1, "map": "main3"}},
+
+			{"x": 12, "y": 11, "target": {"x": 3, "y": 13, "map": "businesscenter"}},
+
+			{"x": 17, "y": 11, "target": {"x": 10, "y": 12, "map":"tradingcenter"}}
+
+	],
+
+	"main3": [
+		{"x": 4, "y": 0, "target": {"x": 4, "y": 14, "map": "main2"}},
+		{"x": 8, "y": 0, "target": {"x": 8, "y": 14, "map": "main2"}},
+		{"x": 9, "y": 0, "target": {"x": 9, "y": 14, "map": "main2"}},
+
+		{"x": 11, "y": 6, "target": {"x": 2, "y": 13, "map":"adminhouse"}, "keys": ["adminkey"]},
+
+		{"x": 4, "y": 13, "target": {"x": 10, "y": 13, "map": "casino"}}
+	],
+
+	"adminhouse": [
+		{"x": 2, "y": 14, "target": {"x": 11, "y": 7, "map":"main3"}},
+		{"x": 2, "y": 15, "target": {"x": 11, "y": 7, "map":"main3"}}
+	],
+
+	"bank": [
+		{"x": 7, "y": 13, "target": {"x": 2, "y": 5, "map": "main"}},
+		{"x": 7, "y": 14, "target": {"x": 2, "y": 5, "map": "main"}}
+	],
+
+	"livinghouse": [
+		{"x": 9, "y": 14, "target": {"x": 4, "y": 12, "map": "main2"}},
+		{"x": 9, "y": 15, "target": {"x": 4, "y": 12, "map": "main2"}},
+		{"x": 10, "y": 14, "target": {"x": 4, "y": 12, "map": "main2"}},
+		{"x": 10, "y": 15, "target": {"x": 4, "y": 12, "map": "main2"}}
+	],
+
+	"supermarket": [
+		{"x": 9, "y": 14, "target": {"x": 18, "y": 13, "map": "main"}},
+		{"x": 9, "y": 15, "target": {"x": 18, "y": 13, "map": "main"}},
+		{"x": 10, "y": 14, "target": {"x": 18, "y": 13, "map": "main"}},
+		{"x": 10, "y": 15, "target": {"x": 18, "y": 13, "map": "main"}}
+	],
+
+	"businesscenter": [
+		{"x": 3, "y": 14, "target": {"x": 12, "y": 12, "map": "main2"}},
+		{"x": 3, "y": 15, "target": {"x": 12, "y": 12, "map": "main2"}}
+	],
+
+	"tradingcenter": [
+		{"x": 10, "y": 13, "target": {"x": 17, "y": 12, "map": "main2"}},
+		{"x": 10, "y": 14, "target": {"x": 17, "y": 12, "map": "main2"}},
+		{"x": 11, "y": 13, "target": {"x": 17, "y": 12, "map": "main2"}},
+		{"x": 11, "y": 14, "target": {"x": 17, "y": 12, "map": "main2"}}
+	],
+
+	"casino": [
+		{"x": 10, "y": 14, "target": {"x": 4, "y": 14, "map": "main3"}},
+		{"x": 10, "y": 15, "target": {"x": 4, "y": 14, "map": "main3"}},
+		{"x": 11, "y": 14, "target": {"x": 4, "y": 14, "map": "main3"}},
+		{"x": 11, "y": 15, "target": {"x": 4, "y": 14, "map": "main3"}}
+	]
+}

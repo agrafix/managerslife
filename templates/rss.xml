@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+	<channel>
+		<title>Manager's Life</title>
+		<description>News</description>
+		<link>{$link}</link>
+		<lastBuildDate>{$gentime}</lastBuildDate>
+		<generator>agrafix RSS-FeedR</generator>
+		<language>de-DE</language>
+		
+		{foreach $items as $item}
+		
+		<item>
+			<title>{$item.title|htmlspecialchars}</title>
+			<link>{$item.link}</link>
+			<description><![CDATA[{$item.description}]]></description>
+			<author>{$item.author|htmlspecialchars}</author>
+			<pubDate>{$item.date}</pubDate>
+		</item>
+		{/foreach}
+		
+	</channel>
+</rss>

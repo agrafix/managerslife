@@ -1,0 +1,46 @@
+<div id="characterTabs" class="formDisplay">
+	<ul>
+		<li><a href="#characterTabs-1">Profil</a></li>
+		<li><a href="#characterTabs-2">Einstellungen</a></li>
+		<li><a href="#characterTabs-3">Account</a></li>
+	</ul>
+
+	<div id="characterTabs-1">
+		<h2>Charakter ändern</h2>
+
+		<ul id="charSelect">
+			{foreach $charImg as $i}
+			{strip}
+				<li class="{if ($User->characterImage == $i.id)}ui-state-default ui-selected{else}ui-state-default{/if}"
+					style="background-image:url({$img_dir}chars/char{$i.name}.png)" title="{$i.id}">{$i.name}</li>
+			{/strip}
+			{/foreach}
+		</ul>
+
+		<div style="clear:both;"></div>
+
+		<form id="formProfile">
+			<input type="hidden" value="{$User->characterImage}" name="characterImage" />
+
+			<br />
+			<input type="submit" value="Speichern" class="svBtn" />
+		</form>
+	</div>
+
+	<div id="characterTabs-2">
+		<h2>Derzeit keine Einstellungen verfügbar</h2>
+	</div>
+
+	<div id="characterTabs-3">
+		<h2>Account</h2>
+
+		<h3>Account löschen</h3>
+		<p>Hier kannst du deinen Account endgültig löschen. Dafür ist die Eingabe deines
+		Passworts nötig.</p>
+
+		<form id="formDelete">
+			Passwort: <input type="password" name="password" value="" /> <br />
+			<input type="submit" value="Account löschen" class="svBtn" />
+		</form>
+	</div>
+</div>

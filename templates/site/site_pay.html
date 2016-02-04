@@ -1,0 +1,16 @@
+<h1>Bezahlvorgang {if ($status == 'ok')}erfolgreich{else}fehlerhaft{/if}</h1>
+
+{if ($status == 'error')}<h2>FehlerID: {$error}</h2>{/if}
+
+{if ($status == 'ok')}
+<p>
+	Die Premiumpunkte werden Ihnen nun so schnell wie möglich gutgeschrieben.
+	Bei Fragen wenden Sie sich an unseren <a href="mailto:mail@managerslife.de">Support</a>.
+</p>
+{else}
+<p>
+	Es gabe einen Fehler beim Bezahlvorgang. Bei Fragen wenden Sie
+	sich bitte an unseren <a href="mailto:mail@managerslife.de">Support</a> und
+	nennen die oben genannte FehlerID.
+</p>
+{/if}

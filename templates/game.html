@@ -1,0 +1,63 @@
+{extends file="main.html"}
+
+{block name="subtitle"}Das Managerspiel{/block}
+
+{block name="javascript_const"}
+const SECURE_HASH = '{$fSecureHash}';
+{/block}
+
+{block name="header"}
+<table style="height:100%;width:100%;margin:0px;padding:0px;">
+		<tr>
+			<td style="height:100%;width:100%;vertical-align:bottom;">
+				<div id="statusbox">
+					<span id="clock">{$smarty.now|date_format:"%H:%M:%S"}</span> |
+					<img src="{$img_dir}icons/building.png" alt="Level" title="Level" /> Level <span id="user_level">{$User->level}</span> |
+					<img src="{$img_dir}icons/money.png" alt="Geld" title="Geld" /> <span id="user_cash">{$User->cash}</span> |
+					<img src="{$img_dir}icons/eye.png" alt="Erfahrung" title="Erfahrung" /> <span id="user_reputation">{$User->xp}</span> |
+					<img src="{$img_dir}icons/door_out.png" alt="Ausloggen" title="Ausloggen" class="handover" id="imgLogoff" />
+				</div>
+			</td>
+		</tr>
+	</table>
+{/block}
+
+{block name="nav"}
+<a href="{$app_dir}game/index">Übersicht</a> | <a href="{$app_dir}game/character">Charakter</a>
+{if ($User->hasRight("db_admin"))} | <a href="{$app_dir}game/db_admin">DB Admin</a>{/if}
+ | <a href="{$app_dir}game/premium">Premium</a> | <a href="http://wiki.managerslife.de/wiki/Tutorial" target="_blank">Tutorial</a>
+ | <a href="{$app_dir}game/ref">Spieler werben Spieler</a>
+{/block}
+
+{block name="content"}
+	{if (!$user_premium)}
+	<div class="infobox premiumbox">
+		Jetzt ab 2,50€ einen Premiumaccount für einen Monat kaufen und Vorteile genießen!
+	</div>
+	{/if}
+
+	{include file=$template}
+
+	{if (!$user_premium)}
+	<hr />
+	<div style="text-align:center;">
+	<script type="text/javascript" src="http://www.sponsorads.de/script.php?s=157122"></script>
+	</div>
+	{/if}
+{/block}
+
+{block name="footer"}
+
+{/block}
+
+{block name="agbf"}
+<a href="{$app_dir}game/ranking">Rangliste</a> | <a href="http://forum.managerslife.de/" target="_blank">Forum</a> | <a href="http://wiki.managerslife.de/" target="_blank">Hilfe</a> | <a href="{$app_dir}site/legal/agb">AGB</a> | <a href="{$app_dir}site/legal/disclaimer">Disclaimer</a> | <a href="{$app_dir}site/legal/credits">Credits</a> | <a href="{$app_dir}site/legal/imprint">Impressum</a>
+
+<p>Zur Zeit sind <b id="players_online">0</b> Spieler online</p>
+{/block}
+
+{block name="final"}
+{if (!$user_premium)}
+<!-- ADS -->
+{/if}
+{/block}

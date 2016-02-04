@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Manager's Life | {block name="subtitle"}Kostenloses Management Browserspiel{/block}</title>
+
+	<link rel="stylesheet" type="text/css" href="{$css_dir}manager.css" />
+	<link rel="stylesheet" type="text/css" href="{$css_dir}black-tie/jquery-ui.css" />
+
+	<script src="{$js_dir}jquery.js" type="text/javascript"></script>
+	<script src="{$js_dir}jquery-ui.js" type="text/javascript"></script>
+	<script src="{$js_dir}jquery-ui.datepicker-de.js" type="text/javascript"></script>
+	<script src="{$js_dir}jquery-timers.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+	const APP_DIR = '{$app_dir}';
+	const IMG_DIR = '{$img_dir}';
+	{block name="javascript_const"}const SECURE_HASH = '';{/block}
+	</script>
+
+	<script src="{$js_dir}manager_framework.js" type="text/javascript"></script>
+
+	{foreach $js_scripts as $script}
+	<script src="{$js_dir}{$script}.js?v=11" type="text/javascript"></script>
+	{/foreach}
+
+	<link rel="shortcut icon" href="{$app_dir}favicon.ico" type="image/x-icon" />
+	{block name="rss"}{/block}
+</head>
+<body>
+
+<div id="header">{block name="header"}{/block}</div>
+
+<div id="nav">
+	{block name="nav"}{/block}
+</div>
+
+<div id="content">
+	<div id="ajax_responder"></div>
+
+	{block name="content"}{/block}
+</div>
+
+<div id="footer">{block name="footer"}{/block}</div>
+
+<div id="agbf">
+{block name="agbf"}{/block}
+</div>
+
+{block name="final"}{/block}
+
+</body>
+</html>

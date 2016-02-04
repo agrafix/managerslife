@@ -1,0 +1,83 @@
+{
+	"0" : {
+		"startnpc": {
+			"text": "Kannst du bitte folgendes Paket für mich zu {stopnpc} bringen?",
+
+			"text2": "Hier ist das Paket! Danke schonmal!",
+
+			"items": [
+			    {"id": 6, "amount": 1, "param": "{stopnpc}"}
+			]
+		},
+
+		"stopnpc": {
+			"text": "Ah, {startnpc} hat dich geschickt! Hast du das Paket für mich?",
+
+			"text2": "Darauf habe ich schon lange gewartet, dankeschön!",
+
+			"base_xp": 20,
+
+			"base_cash": 10,
+
+			"base_time": 300,
+
+			"items": [
+			    {"id": 6, "amount": 1, "param": "{stopnpc}"}
+			]
+		}
+	},
+
+	"1" : {
+		"startnpc": {
+			"text": "Ich möchte {stopnpc} eine kleine Freude machen. Könntest du eine einfache Digital-Uhr kaufen und ihm bringen?",
+
+			"text2": "Danke für deine Hilfe!",
+
+			"items": []
+		},
+
+		"stopnpc": {
+			"text": "Oh, ist diese einfache Digital-Uhr für mich?",
+
+			"text2": "Wow, die wollte ich schon immer haben! Danke danke danke!",
+
+			"base_xp": 15,
+
+			"base_cash": 25,
+
+			"base_time": 600,
+
+			"items": [
+			    {"id": 2, "amount": 1, "param": ""}
+			]
+		}
+	},
+
+	"2" : {
+		"startnpc": {
+			"text": "{stopnpc} hat eine Aktentasche hier verloren. Kannst du sie zurückbringen?",
+
+			"text2": "Danke für deine Hilfe!",
+
+			"items": [
+			    {"id": 7, "amount": 1, "param": "{stopnpc}"}
+			]
+		},
+
+		"stopnpc": {
+			"text": "Ist das meine Aktentasche?",
+
+			"text2": "Danke fürs zurückbringen, ich hab schon überall gesucht!",
+
+			"base_xp": 15,
+
+			"base_cash": 45,
+
+			"base_time": 300,
+
+			"items": [
+			    {"id": 7, "amount": 1, "param": "{stopnpc}"}
+			]
+		}
+	}
+}

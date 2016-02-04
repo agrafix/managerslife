@@ -1,0 +1,457 @@
+{
+    "paper0": {
+        "title": "Eine neue Ausgabe",
+        "text": "Ein Medienunternehmen möchte eine neue Ausgabe seines Magazins veröffentlichen. Leider fehlt ihnen Papier. Könntest du das für mich produzieren?",
+        "needs": [{
+            "type": "resource",
+            "name": "paper",
+            "amount": 1000
+        }],
+        "time": 2,
+        "investmentCosts": 8100,
+        "level": 0,
+        "profit": 18000,
+        "oncomplete": {
+            "xp": 50,
+            "cash": 26100
+        }
+    },
+    "cloth1": {
+        "title": "Wintermode",
+        "text": "Ein Modedesigner braucht dringend noch Stoffe für seine aktuelle Kollektion. Kannst du mir dabei helfen?",
+        "needs": [{
+            "type": "resource",
+            "name": "cloth",
+            "amount": 84
+        }],
+        "time": 2,
+        "investmentCosts": 3784,
+        "level": 1,
+        "profit": 25000,
+        "oncomplete": {
+            "xp": 75,
+            "cash": 28784
+        }
+    },
+    "silicon2": {
+        "title": "Silizium",
+        "text": "Ein Chiphersteller hat einen Defekt an einer Produktionsmaschine. Könntest du das Fehlende Silizium liefern?",
+        "needs": [{
+            "type": "resource",
+            "name": "silicon",
+            "amount": 80
+        }],
+        "time": 2,
+        "investmentCosts": 6620,
+        "level": 2,
+        "profit": 65000,
+        "oncomplete": {
+            "xp": 112,
+            "cash": 71620
+        }
+    },
+	"paper2": {
+		"title": "Keine Zeitung?!",
+		"text": "Leider fehlen zum Drucken der Zeitung für diesen Samstag noch Papier. Kannst du aushelfen?",
+		"needs": [
+			{
+			"type": "resource",
+			"name": "paper",
+			"amount": "2000"
+			}
+		],
+		"time": 1,
+		"investmentCosts": 14200,
+		"level": 2,
+		"profit": 14000,
+		"oncomplete": {
+			"xp": 50,
+			"cash": 28200
+		}
+	},
+    "chair3": {
+        "title": "Neueröffnung",
+        "text": "Ein Restaurant feiert seine Neueröffnung - leider fehlen noch einige Stühle. Kannst du diese liefern?",
+        "needs": [{
+            "type": "product",
+            "name": "chair",
+            "amount": 70
+        }],
+        "time": 2,
+        "investmentCosts": 53174,
+        "level": 3,
+        "profit": 122500,
+        "oncomplete": {
+            "xp": 169,
+            "cash": 175674
+        }
+    },
+    "plastic4": {
+        "title": "Spielzeug",
+        "text": "Ein Spielzeughersteller benötigt dringend mehr Plastik - kannst du welches liefern?",
+        "needs": [{
+            "type": "resource",
+            "name": "plastic",
+            "amount": 1537
+        }],
+        "time": 2,
+        "investmentCosts": 115370,
+        "level": 4,
+        "profit": 142500,
+        "oncomplete": {
+            "xp": 253,
+            "cash": 257870
+        }
+    },
+    "color5": {
+        "title": "Farbenfroh",
+        "text": "In der Stadt werden zwei neue Häuser gebaut - kannst du die Farbe für den Anstrich liefern?",
+        "needs": [{
+            "type": "resource",
+            "name": "color",
+            "amount": 1614
+        }],
+        "time": 2,
+        "investmentCosts": 137754,
+        "level": 5,
+        "profit": 327500,
+        "oncomplete": {
+            "xp": 380,
+            "cash": 465254
+        }
+    },
+    "pants6": {
+        "title": "Billig ist Besser",
+        "text": "Ein Discounter möchte in ein paar Tagen Jeans im Sonderangebot verkaufen - leider ist kurzfristig eine Produktion stillgelegt worden. Möchtest du einspringen?",
+        "needs": [{
+            "type": "product",
+            "name": "pants",
+            "amount": 603
+        }],
+        "time": 2,
+        "investmentCosts": 291306,
+        "level": 6,
+        "profit": 545000,
+        "oncomplete": {
+            "xp": 569,
+            "cash": 836306
+        }
+    },
+    "papercolor6": {
+		"title": "Farbdruck",
+		"text": "Ein Medienunternehmen möchte Flyer für eine Abschlussfeier drucken lassen. Kannst du Farbe und Papier für den Druck liefern?",
+		"needs": [
+			{
+			"type": "resource",
+			"name": "color",
+			"amount": "1000"
+			}
+			,{
+			"type": "resource",
+			"name": "paper",
+			"amount": "1000"
+			}
+		],
+		"time": 1,
+		"investmentCosts": 137000,
+		"level": 6,
+		"profit": 133000,
+		"oncomplete": {
+			"xp": 400,
+			"cash": 270000
+		}
+	},
+    "magazine7": {
+        "title": "Lesen",
+        "text": "Ein Bestseller geht wird gedruckt, und der Ansturm ist riesig. Leider können die aktuellen Lieferanten nicht genügend Bücher drucken. Kannst du helfen?",
+        "needs": [{
+            "type": "product",
+            "name": "magazine",
+            "amount": 5271
+        }],
+        "time": 2,
+        "investmentCosts": 600149,
+        "level": 7,
+        "profit": 652500,
+        "oncomplete": {
+            "xp": 854,
+            "cash": 1252649
+        }
+    },
+    "shirt8": {
+        "title": "Discounter",
+        "text": "Nachdem die Jeans ein riesen Erfolg im Verkauf waren, möchte der Discounter nun auch Hemden verkaufen.",
+        "needs": [{
+            "type": "product",
+            "name": "shirt",
+            "amount": 1329
+        }],
+        "time": 2,
+        "investmentCosts": 693089,
+        "level": 8,
+        "profit": 710000,
+        "oncomplete": {
+            "xp": 1282,
+            "cash": 1403089
+        }
+    },
+    "table9": {
+        "title": "Möbelhäuser",
+        "text": "Eine Möbelhauskette möchte Esstische verkaufen und sucht nun Produktionsanlagen, die Tische herstellen.",
+        "needs": [{
+            "type": "product",
+            "name": "table",
+            "amount": 1860
+        }],
+        "time": 2,
+        "investmentCosts": 859973,
+        "level": 9,
+        "profit": 852500,
+        "oncomplete": {
+            "xp": 1922,
+            "cash": 1712473
+        }
+    },
+    "chip10": {
+        "title": "Rechenpower",
+        "text": "Eine Universität ist dabei einen neuen Supercomputer zu bauen, allerdings fehlen noch eine Menge Chips. Kannst du helfen?",
+        "needs": [{
+            "type": "resource",
+            "name": "chip",
+            "amount": 5786
+        }],
+        "time": 3,
+        "investmentCosts": 1081876,
+        "level": 10,
+        "profit": 1792500,
+        "oncomplete": {
+            "xp": 2883,
+            "cash": 2874376
+        }
+    },
+    "silicon10": {
+		"title": "Silizium en masse",
+		"text": "Jetzt ist deine Chance dich auf dem Silizium-Markt zu beweisen! Ein Chiphersteller benötigt eine große Menge und ich denke Du bist der richtige für den Job.",
+		"needs": [
+			{
+			"type": "resource",
+			"name": "silicon",
+			"amount": "40000"
+			}
+		],
+		"time": 43,
+		"investmentCosts": 825000,
+		"level": 10,
+		"profit": 675000,
+		"oncomplete": {
+			"xp": 10000,
+			"cash": 1500000
+		}
+	},
+    "display11": {
+        "title": "Display-Marathon",
+        "text": "Ein Unternehmen möchte eine Seite seines Bürogebäudes mit Displays bestücken, um Werbung anzuzeigen. Kannst du die gewünsche Stückzahl produzieren?",
+        "needs": [{
+            "type": "resource",
+            "name": "display",
+            "amount": 6075
+        }],
+        "time": 3,
+        "investmentCosts": 2312025,
+        "level": 11,
+        "profit": 2705000,
+        "oncomplete": {
+            "xp": 4325,
+            "cash": 5017025
+        }
+    },
+    "fridge12": {
+        "title": "Ein kühles Bier",
+        "text": "Eine Restaurantkette braucht neue Kühlschränke. Kannst du helfen?",
+        "needs": [{
+            "type": "product",
+            "name": "fridge",
+            "amount": 114
+        }],
+        "time": 4,
+        "investmentCosts": 2010948,
+        "level": 12,
+        "profit": 2422500,
+        "oncomplete": {
+            "xp": 6487,
+            "cash": 4433448
+        }
+    },
+    "calculator13": {
+        "title": "Rechenkönig",
+        "text": "Die Schulen hier in der Umgebung haben beschlossen einen einheitlichen Taschenrechner zu verwenden. Kannst du mir helfen diese herzustellen?",
+        "needs": [{
+            "type": "product",
+            "name": "calculator",
+            "amount": 7938
+        }],
+        "time": 5,
+        "investmentCosts": 3955942,
+        "level": 13,
+        "profit": 4877500,
+        "oncomplete": {
+            "xp": 9731,
+            "cash": 8833442
+        }
+    },
+    "chipdisplay13": {
+		"title": "Massenprodukte",
+		"text": "Ein Unternehmen bereitet den Marktstart seines neuen Smartphones vor. Leider sind jedoch einige Chip und Display-Hersteller aus der Produktionskette ausgestiegen. Kannst du hier weiterhelfen?",
+		"needs": [
+			{
+			"type": "resource",
+			"name": "chip",
+			"amount": "12000"
+			}
+			,{
+			"type": "resource",
+			"name": "display",
+			"amount": "12000"
+			}
+		],
+		"time": 7,
+		"investmentCosts": 4596000,
+		"level": 13,
+		"profit": 5000000,
+		"oncomplete": {
+			"xp": 25000,
+			"cash": 9596000
+		}
+	},
+    "smartphone14": {
+        "title": "Das Internet in deiner Tasche",
+        "text": "Ein Startup-Unternehmen hat ein neuartiges Smartphone entwickelt und sucht jemanden, der diese herstellen kann. Möchtest du einspringen?",
+        "needs": [{
+            "type": "product",
+            "name": "smartphone",
+            "amount": 5557
+        }],
+        "time": 6,
+        "investmentCosts": 7061907,
+        "level": 14,
+        "profit": 7690000,
+        "oncomplete": {
+            "xp": 14597,
+            "cash": 14751907
+        }
+    },
+    "notebook15": {
+        "title": "Großbestellung",
+        "text": "Wir brauchen dringend neue Notebooks für die Auftragsverwaltung. Ich dachte, du könntest sie vielleicht für uns produzieren?",
+        "needs": [{
+            "type": "product",
+            "name": "notebook",
+            "amount": 3112
+        }],
+        "time": 8,
+        "investmentCosts": 11215712,
+        "level": 15,
+        "profit": 5607856,
+        "oncomplete": {
+            "xp": 21895,
+            "cash": 16823568
+        }
+    },
+	"salesmen17": {
+		"title": "Neuausstattung der Vertreter",
+		"text": "Die Vertreter unseres Unternehmens sollen mit einheitlichen Taschenrechnern, Smartphones und Notebooks ausgestattet werden. Kannst du sie liefern?",
+		"needs": [
+			{
+			"type": "product",
+			"name": "calculator",
+			"amount": "2200"
+			}
+			,{
+			"type": "product",
+			"name": "smartphone",
+			"amount": "2200"
+			}
+			,{
+			"type": "product",
+			"name": "notebook",
+			"amount": "2200"
+			}
+		],
+		"time": 6,
+		"investmentCosts": 17369200,
+		"level": 16,
+		"profit": 3630800,
+		"oncomplete": {
+			"xp": 64321,
+			"cash": 21000000
+		}
+	},
+	"office18": {
+		"title": "Büroeinrichtung",
+		"text": "Der Aufsichtsrat hat beschlossen, dass sämtliche Sozialräume neu ausgestattet werden sollen und dass dort die neuste Ausgabe des Firmenmagazins ausgelegt werden muss. Kannst du die notwendigen Einrichtungsgegenstände und die Magazine produzieren?",
+		"needs": [
+			{
+			"type": "product",
+			"name": "chair",
+			"amount": "4450"
+			}
+			,{
+			"type": "product",
+			"name": "table",
+			"amount": "16150"
+			}
+			,{
+			"type": "product",
+			"name": "fridge",
+			"amount": "359"
+			}
+			,{
+			"type": "product",
+			"name": "magazine",
+			"amount": "89999"
+			}
+		],
+		"time": 8,
+		"investmentCosts": 8055320,
+		"level": 17,
+		"profit": 1390480,
+		"oncomplete": {
+			"xp": 42042,
+			"cash": 9445800
+		}
+	},
+	"textil17": {
+		"title": "Textilomania",
+		"text": "Ein Modehaus möchte ein Aktionspaket anbieten, das aus Hose mit passendem Hemd und einem Taschenrechner im gleichen Design besteht. Dazu soll es noch ein paar Modemagazine geben. Kannst du das liefern?",
+		"needs": [
+			{
+			"type": "product",
+			"name": "pants",
+			"amount": "12000"
+			}
+			,{
+			"type": "product",
+			"name": "shirt",
+			"amount": "12000"
+			}
+			,{
+			"type": "product",
+			"name": "magazine",
+			"amount": "60000"
+			}
+			,{
+			"type": "product",
+			"name": "calculator",
+			"amount": "12000"
+			}
+		],
+		"time": 7,
+		"investmentCosts": 9566000,
+		"level": 17,
+		"profit": 2454500,
+		"oncomplete": {
+			"xp": 57390,
+			"cash": 12020500
+		}
+	}
+}

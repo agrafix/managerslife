@@ -1,0 +1,39 @@
+<div id="gameTabs">
+	<ul>
+		<li><a href="#gameTabs-1">Spiel</a></li>
+		<li id="chatTab"><a href="#gameTabs-2">Chat</a></li>
+	</ul>
+
+	<div id="gameTabs-1">
+		<div id="mapWrapper">
+			<canvas id="mainMap" width="704" height="512">
+					Dein Browser unterstützt dieses Spiel leider nicht. Lade dir eine aktuelle Version
+					herrunter!
+			</canvas>
+		</div>
+	</div>
+
+	<div id="gameTabs-2">
+		<div id="mapChat">
+			<form id="chatForm">
+				<input type="text" name="chattext" id="chattext" />
+				<img src="{$img_dir}ajax-loader-small.gif" alt="Loading" style="display:none;" id="loadIcon" />
+				<input type="submit" value="Sagen" id="chatBtn" />
+			</form>
+
+			<div id="chatLog"></div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var mp = GE_mapHelper.fromTileCoords({$x}, {$y});
+GE.showMap = '{$map}';
+GE.player = new GE_char("{$characterImage}", 'Du', 0, mp.x, mp.y);
+GE.player.ownPlayer = true;
+</script>
+
+<div id="inventory_opener" class="ui-state-default ui-corner-all"></div>
+
+<div id="inventory">
+</div>

@@ -1,0 +1,91 @@
+<h2>Datenbank Administrator</h2>
+
+<div id="deleteDialog" style="display:none;">
+	Sicher, dass du den Eintrag mit der ID <span id="deleteId">0</span> löschen möchtest?
+
+	<form action="{$app_dir}game/db_admin/main" method="post" id="delForm">
+			<input type="hidden" name="entryAction" value="delete" />
+			<input type="hidden" name="entryId" value="" />
+	</form>
+</div>
+
+<form action="{$app_dir}game/db_admin/main" method="post" id="duplicateForm" style="display:none;">
+			<input type="hidden" name="entryAction" value="duplicate" />
+			<input type="hidden" name="entryId" value="" />
+</form>
+
+<div id="dbaTabs" class="formDisplay">
+	<ul>
+		<li><a href="#dbaTabs-1">Tabelle wählen</a></li>
+		<li><a href="#dbaTabs-2">Tabelle</a></li>
+		<li><a href="#dbaTabs-3">Eintrag</a></li>
+	</ul>
+
+	<div id="dbaTabs-1">
+
+		<form action="{$app_dir}game/db_admin/main" method="post">
+		<select name="switchTable">
+			{foreach $dbTables as $k => $v}
+			<option value="{$k}" {if ($k == $currentTable)}selected="selected"{/if}>{$k}</option>
+			{/foreach}
+		</select>
+
+		<input class="svBtn" type="submit" value="Wechseln" />
+		</form>
+
+	</div>
+
+	<div id="dbaTabs-2">
+		<table class="ordered">
+			<tr>
+			<th>ID</th>
+			{foreach $dbTables.$currentTable as $r}
+				<th>{$r}</th>
+			{/foreach}
+			<th></th>
+			<th></th>
+			<th></th>
+			</tr>
+
+			{foreach $tableRows as $id => $row}
+			<tr>
+				<th>{$id}</th>
+				{foreach $dbTables.$currentTable as $r}
+				<td class='entry_{$r}'>{$row.$r}</td>
+				{/foreach}
+				<td>
+					<a class="svBtn editLink" title="{$id}">
+						<img src="{$img_dir}icons/pencil.png" alt="edit" />
+					</a>
+				</td>
+				<td>
+					<a class="svBtn deleteLink" title="{$id}">
+						<img src="{$img_dir}icons/bin.png" alt="delete" />
+					</a>
+				</td>
+				<td>
+					<a class="svBtn duplicateLink" title="{$id}">
+						<img src="{$img_dir}icons/page_copy.png" alt="duplicate" />
+					</a>
+				</td>
+			</tr>
+			{/foreach}
+		</table>
+	</div>
+
+	<div id="dbaTabs-3">
+		<h3>Eintrag <span id="actionLabel">hinzufügen</span> <a id="quitEdit"></a></h3>
+
+		<form action="{$app_dir}game/db_admin/main" method="post" id="editForm">
+			<input type="hidden" name="entryAction" value="add" />
+			<input type="hidden" name="entryId" value="" />
+
+			{foreach $dbTables.$currentTable as $r}
+			<label for="entry_{$r}">{$r}</label>
+			<input name="entry[{$r}]" value="" type="text" id="entry_{$r}" />
+			{/foreach}
+
+			<input class="svBtn" type="submit" value="Speichern" />
+		</form>
+	</div>
+</div>

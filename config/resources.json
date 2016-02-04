@@ -1,0 +1,75 @@
+{
+	"glas": {
+		"base_price": 30
+	},
+
+	"gold": {
+		"base_price": 40
+	},
+
+	"aluminium": {
+		"base_price": 35
+	},
+
+	"sand": {
+		"base_price": 8
+	},
+
+	"oil": {
+		"base_price": 9
+	},
+
+	"wool": {
+		"base_price": 5
+	},
+
+	"cotton": {
+		"base_price": 1
+	},
+
+	"wood": {
+		"base_price": 6
+	},
+
+	"silicon": {
+		"base_price": 21,
+		"needs": ["sand"],
+		"machine": {"cost": 5000, "running_cost": 500, "prod_per_hour": 40}
+	},
+
+	"plastic": {
+		"base_price": 10,
+		"needs": ["oil"],
+		"machine": {"cost": 100000, "running_cost": 400, "prod_per_hour": 400}
+	},
+
+	"color": {
+		"base_price": 11,
+		"needs": ["oil"],
+		"machine": {"cost": 120000, "running_cost": 600, "prod_per_hour": 300}
+	},
+
+	"cloth": {
+		"base_price": 10,
+		"needs": ["wool", "cotton"],
+		"machine": {"cost": 3000, "running_cost": 200, "prod_per_hour": 60}
+	},
+
+	"paper": {
+		"base_price": 7,
+		"needs": ["wood"],
+		"machine": {"cost": 2000, "running_cost": 100, "prod_per_hour": 1000}
+	},
+
+	"chip": {
+		"base_price": 66,
+		"needs": ["gold", "silicon"],
+		"machine": {"cost": 700000, "running_cost": 1000, "prod_per_hour": 200}
+	},
+
+	"display": {
+		"base_price": 133,
+		"needs": ["glas", "chip", "silicon"],
+		"machine": {"cost": 1500000, "running_cost": 2500, "prod_per_hour": 150}
+	}
+}

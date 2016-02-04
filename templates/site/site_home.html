@@ -1,0 +1,104 @@
+<div class="left">
+<h1>Manager's Life - Das Browserspiel</h1>
+<p>Manager's Life ist eine Wirtschaftssimulation, die in einem Browser
+gespielt wird. Jeder Spieler startet mit einem kleinem Unternehmen und
+wird vielleicht eines Tages ein großes Wirtschaftsimperium leiten...</p>
+
+<p><a href="{$app_dir}site/register" id="register_link">&raquo; Jetzt
+kostenlos mitspielen</a> </p>
+
+<p><b>Bereits {$playercount} Spieler versuchen ihr Glück!</b></p>
+
+<table>
+	<tr>
+		<td>
+		<div
+			style="width: 100px; height: 100px; background-color: #7B7B7B; border: 1px solid black;">
+				<img src="{$img_dir}site/mlife_01.png" width="100" height="100" alt="Item" />
+			</div>
+		</td>
+		<td>
+		<div
+			style="width: 100px; height: 100px; background-color: #7B7B7B; border: 1px solid black;">
+				<img src="{$img_dir}site/mlife_02.png" width="100" height="100" alt="Item" />
+			</div>
+		</td>
+		<td>
+		<div
+			style="width: 100px; height: 100px; background-color: #7B7B7B; border: 1px solid black;">
+				<img src="{$img_dir}site/mlife_03.png" width="100" height="100" alt="Item" />
+			</div>
+		</td>
+	</tr>
+</table>
+</div>
+
+<div class="right">
+<h1>Login</h1>
+{if ($first_login)}
+<script type="text/javascript">
+MF.postMessage('green_box', 'Aktivierung erfolgreich', 'Dein Account ist jetzt aktiviert und du kannst dich nun einloggen!');
+</script>
+{/if}
+
+{if ($session_expired)}
+<script type="text/javascript">
+MF.postMessage('red_box', 'Sitzung abgelaufen', 'Deine Sitzung ist abgelaufen. Bitte erneut einloggen!');
+</script>
+{/if}
+
+<form action="" id="form_Login">
+<table id="login_table">
+	<tr>
+		<th>Benutzername:</th>
+		<td><input type="text" value="" name="username" /></td>
+	</tr>
+	<tr>
+		<th>Passwort:</th>
+		<td><input type="password" value="" name="password" /></td>
+	</tr>
+	<tr>
+		<th></th>
+		<td><input type="submit" value="Einloggen" id="loginBtn" />
+		<br /><br />
+		<a href="{$app_dir}site/account/forgot">Passwort vergessen?</a>
+		<br />
+		<a href="{$app_dir}site/account/reactivate">Aktivierungsmail nicht bekommen?</a>
+		</td>
+	</tr>
+</table>
+</form>
+
+<h1>Letzte Ankündigungen</h1>
+{foreach $news as $post}
+<div class="boxed linked" id="n{$post.id}">
+	<b>{$post.title|htmlspecialchars}</b>
+	<i>von {$post.author|htmlspecialchars}</i>
+	<span style="font-size:x-small;">&raquo; lesen</span>
+	<span style="float:right;font-size:x-small;">{$post.time|date_format}</span>
+</div>
+<br />
+{/foreach}
+
+<div style="display: none;" id="newsPopup">
+</div>
+
+<span style="float:right;">
+	<a href="http://twitter.com/managerslife" target="_blank">
+		<img src="{$img_dir}site/twitter.png" alt="Follow Us!" width="64" height="64" />
+	</a>
+	<a href="http://www.facebook.com/pages/Managers-Life/236314777072" target="_blank">
+		<img src="{$img_dir}site/facebook.png" alt="Become fan!" width="64" height="64" />
+	</a>
+	<a href="https://plus.google.com/118300898939138494703" target="_blank">
+		<img src="{$img_dir}site/google.png" alt="Google+" width="64" height="64" />
+	</a>
+	<a href="http://www.youtube.com/user/managerslife" target="_blank">
+		<img src="{$img_dir}site/youtube.png" alt="Youtube Channel" width="64" height="64" />
+	</a>
+	<a href="{$app_dir}site/rss/news">
+		<img src="{$img_dir}site/rss.png" alt="Read RSS Feeds" width="64" height="64" />
+	</a>
+</span>
+</div>
+<br class="clear" />

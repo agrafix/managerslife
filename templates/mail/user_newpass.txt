@@ -1,0 +1,18 @@
+Hallo {$username},
+
+du hast ein neues Passwort für {$homepage} angefordert. Es lautet wie folgt:
+
+-------------------------------------------------------------------------
+
+{$password}
+
+-------------------------------------------------------------------------
+
+Du kannst dein Passwort nach dem Login selbstständig ändern. 
+
+Solltest du kein neues Passwort angefordert haben, so antworte bitte umgehend 
+auf diese Email.
+
+Viel Spaß beim Spielen wünscht,
+
+dein Manager's Life Team

@@ -1,0 +1,35 @@
+<h2>Rangliste</h2>
+
+<table class="ordered">
+	<tr>
+		<th>Rang</th> <th>Spieler</th> <th>Level</th> <th>XP</th>
+	</tr>
+	{foreach $players as $p}
+	<tr>
+		<td style="text-align:right;">{$p.rank}.</td>
+		<td>{if ($p.premium)}<img src="{$img_dir}icons/star.png" alt="Star" title="Premium" />{/if} {$p.username|htmlspecialchars}</td>
+		<td style="text-align:right;">
+		<img src="{$img_dir}icons/building.png" alt="building" /> {$p.level}
+		</td>
+		<td style="text-align:right;">{$p.xp} <img src="{$img_dir}icons/eye.png" alt="Eye" /></td>
+	</tr>
+	{/foreach}
+
+	<tr>
+		<td colspan="2">
+			{if ($currentPage > 1)}
+				<a href="{$app_dir}game/ranking/main/{math equation='x-1' x=$currentPage}">
+					&laquo; Seite zurück
+				</a>
+			{/if}
+		</td>
+
+		<td colspan="2" style="text-align:right;">
+			{if ($currentPage < $pages)}
+				<a href="{$app_dir}game/ranking/main/{math equation='x+1' x=$currentPage}">
+					Seite vorwärts &raquo;
+				</a>
+			{/if}
+		</td>
+	</tr>
+</table>

@@ -1,0 +1,92 @@
+<h1>Premium</h1>
+
+<h2><a href="{$app_dir}game/premium/buy" class="premiumBtn">&raquo; Jetzt kaufen!</a></h2>
+<br />
+
+{if ($pError != "")}
+<script type="text/javascript">
+MF.postMessage('red_box', 'Fehler', '{$pError}');
+</script>
+{/if}
+
+{if (isset($ok))}
+<script type="text/javascript">
+MF.postMessage('green_box', 'Premium-Account', 'Dein Premium-Account wurde erfolgreich aktiviert!');
+</script>
+{/if}
+
+<h2>Übersicht</h2>
+<table class="ordered">
+<tr>
+	<th>Vorhandene Premium-Punkte</th>
+	<td>{$myPremium->points}</td>
+</tr>
+<tr>
+	<th>Premium-Account derzeit aktiv?</th>
+	<td>
+		<img src="{$img_dir}icons/{if ($User->hasPremium(true))}tick{else}cross{/if}.png" alt="?" />
+	</td>
+</tr>
+<tr>
+	<th>Premium-Account {if ($User->hasPremium(true))}verlängern{else}aktivieren{/if}</th>
+	<td>
+	<form action="{$app_dir}game/premium" method="post">
+	<input type="hidden" name="hash" value="{$secHash}" />
+	<select name="length">
+		<option value="1">3 Tage - 150 Punkte</option>
+		<option value="2">7 Tage - 200 Punkte</option>
+		<option value="3">14 Tage - 300 Punkte</option>
+		<option value="4">30 Tage - 500 Punkte</option>
+	</select>
+	<input class="premiumBtn" type="submit" name="activate" value="{if ($User->hasPremium(true))}verlängern{else}aktivieren{/if}" />
+	</form>
+	</td>
+</tr>
+{if ($User->hasPremium(true))}
+<tr>
+	<th>Premium-Account aktiv bis</th>
+	<td><img src="{$img_dir}icons/date.png" alt="date" /> {$myPremium->until|date_format:"%d.%m.%Y um %H:%M:%S"} Uhr</td>
+</tr>
+<tr>
+	<th>automatisch verlängern?</th>
+	<td>
+	<form action="{$app_dir}game/premium" method="post">
+		<input type="checkbox" value="1" name="automatic" {if ($myPremium->auto == 1)}checked="checked"{/if} />
+		<input class="premiumBtn" type="submit" name="change" value="Speichern" />
+	</form>
+	</td>
+</tr>
+{/if}
+</table>
+
+<br />
+<h2>Premium Vorteile</h2>
+
+<h3>Lagerverwaltungs-Regeln</h3>
+
+<p>Mit einem Premiumaccount kannst du im TradingCenter bei dem NPC "Joseph" Lagerverwaltungs-Regeln
+anlegen. Sollte dann dein Lagerbestand unter oder über ein bestimmten Wert rutschen, werden automatisch
+Kauf- bzw. Verkauforder erstellt um das wieder auszugleichen.</p>
+
+<h3>Kauf- und Verkauforder mit einer Gültigkeit von bis zu 60 Tagen</h3>
+
+<p>Normale Order verfallen nach 3 Tagen. Mit einem Premium-Account hast du die Möglichkeit,
+dass sich eine Order automatisch verlängert - bis zu einem angegebenem Tag. Dieser darf maximal
+60 Tage in der Zukunft liegen.</p>
+
+<h3>Aufträge automatisch beenden</h3>
+
+<p>Mit aktiviertem Premium-Account werden deine laufenden Aufträge bevor sie ablaufen automatisch
+beendet wenn ausreichend Produkte und Ressourcen verfügbar sind.</p>
+
+<h3>Accountlöschung bei Inaktivität</h3>
+
+<p>Ein normaler Account wird automatisch deaktiviert und gelöscht, wenn 14 Tage lang kein
+Login mehr erfolgt. Bei einem Premium-Account wird dieser erst nach Ablaufen des Premium-Accounts bei
+Inaktivität gelöscht.</p>
+
+<h3>Werbefreiheit</h3>
+
+<p>Bei aktiviertem Premium-Account wird keine Werbung angezeigt.</p>
+
+<h3>Unterstützung für den Fortbestand und die Weiterentwicklung von www.managerslife.de</h3>
