@@ -19,7 +19,7 @@ Note that his is probably not complete!
 ### Requirements
 
 * PHP5
-* Apache (might also work with nginx)
+* Apache (+ModRewrite) (might also work with nginx)
 * mysql
 
 ### Preparation
@@ -29,6 +29,7 @@ git clone https://github.com/agrafix/managerslife
 cd managerslife
 emacs config.php # adjust database values etc
 mysql < schema.sql
+mysql < prepare.sql
 ```
 
 ## License
