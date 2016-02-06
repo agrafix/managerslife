@@ -34,3 +34,5 @@ mysql < schema.sql
 ## License
 
 Everything is released under the MIT license, except stated otherwise in a source file. Copyright (c) 2011-2016 Alexander Thiemann. See LICENSE File.
+
+Graphics are under the Creative Commons Attribution Share-Alike and No Derivatives license.
